@@ -5,7 +5,7 @@ import openai
 def add_full_stops_to_comments(input_code):
     """Take some code and add full stops to comments."""
     # Get the OpenAI API key.
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
     # Format the prompt.
     prompt = input_code + "\n\n% Refactor this code to add full stops to the end of each comment block if a full " \
